@@ -66,7 +66,7 @@ export function ProjectsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          Nossos Projetos
+          Mais Casos
         </motion.h2>
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"

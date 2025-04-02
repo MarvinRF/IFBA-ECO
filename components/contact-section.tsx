@@ -132,7 +132,7 @@ export function ContactSection() {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <Mail className="h-5 w-5 text-primary" />
-                  <span>contato@ecoeducar.com.br</span>
+                  <span>contato@IFBA - Concientização.com.br</span>
                 </motion.div>
                 <motion.div
                   className="flex items-center space-x-3"

@@ -15,26 +15,28 @@ import { Progress } from "@/components/ui/progress";
 const CAROUSEL_ITEMS = [
   {
     image:
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80",
-    title: "Preservação Ambiental",
-    description: "Juntos pela conservação do nosso planeta",
+      "https://imgs.mongabay.com/wp-content/uploads/sites/29/2023/01/23144459/Rafael-Martins-Mongabay-4-scaled-e1674485236671-2400x890.jpg",
+    title: "Ilha de Maré (Salvador)",
+    description:
+      "Contaminação por metais pesados (chumbo e cádmio) em crianças, em níveis quatro vezes acima do permitido pela OMS",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "Energia Renovável",
-    description: "O futuro é sustentável",
+      "https://valencaagora.com/wp-content/uploads/2023/10/WhatsApp-Image-2023-09-27-at-14.33.13-2.jpeg",
+    title: "Orobó (Valença)",
+    description:
+      "Lixão de Valença continua impactando o meio ambiente e a sociedade",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1573771132297-928d549e039c?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "Reciclagem",
+      "https://www.bahianoticias.com.br/fotos/municipios_noticias/38680/IMAGEM_NOTICIA_9.jpg?checksum=1711489877",
+    title: "Morro de São Paulo (Cairu)",
     description: "Transformando resíduos em recursos",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1550358864-518f202c02ba?auto=format&fit=crop&q=80uns",
-    title: "Biodiversidade",
+      "https://upload.wikimedia.org/wikipedia/commons/e/ea/Valen%C3%A7a%2C_Bahia.JPG",
+    title: "Centro (Valença)",
     description: "Protegendo a vida em todas suas formas",
   },
 ];
@@ -102,7 +104,7 @@ export function HeroCarousel() {
                   priority={index === 0}
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 mt-64">
                     {title}
                   </h2>
                   <p className="text-xl md:text-2xl">{description}</p>

@@ -1,33 +1,33 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Recycle, Leaf, Droplets, Sun } from "lucide-react";
+import { Rss, TriangleAlert, Scale, GraduationCap } from "lucide-react";
 import { motion } from "framer-motion";
 
 const features = [
   {
-    icon: <Leaf className="h-8 w-8 text-green-600" />,
-    title: "Conservação",
+    icon: <TriangleAlert className="h-8 w-8 text-green-600" />,
+    title: "Consientização",
     description:
-      "Aprenda sobre a importância da preservação dos ecossistemas naturais e como você pode contribuir para a conservação do meio ambiente.",
+      "Conscientizar a sociedade sobre o impacto do racismo ambiental e suas consequências para comunidades vulneráveis.",
   },
   {
-    icon: <Recycle className="h-8 w-8 text-green-600" />,
-    title: "Sustentabilidade",
+    icon: <Rss className="h-8 w-8 text-green-600" />,
+    title: "Divulgação",
     description:
-      "Descubra práticas sustentáveis para o dia a dia e como pequenas mudanças podem ter um grande impacto positivo no planeta.",
+      "Ampliar a visibilidade de casos de injustiça ambiental que afetam populações racializadas.",
   },
   {
-    icon: <Droplets className="h-8 w-8 text-green-600" />,
-    title: "Recursos Naturais",
+    icon: <Scale className="h-8 w-8 text-green-600" />,
+    title: "Apoio Legal",
     description:
-      "Entenda a importância do uso consciente dos recursos naturais e como podemos garantir sua disponibilidade para futuras gerações.",
+      "Facilitar o acesso a recursos legais e redes de apoio para vítimas de racismo ambiental.",
   },
   {
-    icon: <Sun className="h-8 w-8 text-green-600" />,
-    title: "Energia Limpa",
+    icon: <GraduationCap className="h-8 w-8 text-green-600" />,
+    title: "Produção Acadêmica",
     description:
-      "Conheça as diferentes fontes de energia renovável e como elas podem contribuir para um futuro mais sustentável.",
+      "Incentivar a produção acadêmica e jornalística sobre o tema, reunindo artigos, pesquisas e reportagens.",
   },
 ];
 
@@ -57,7 +57,7 @@ export function AboutSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          Sobre Nossa Missão
+          Sobre o Propósito
         </motion.h2>
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
