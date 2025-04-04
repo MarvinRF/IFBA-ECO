@@ -21,7 +21,7 @@ export function Footer() {
               Este site foi desenvolvido pela turma de Seminários Temáticos II
               do semestre 2024.2, pelos estudantes Gustavo Teles Rocha, Mavin
               Rocha, Anderson Guimarães e Marcos Santos, sob a orientação da
-              professora Elite Barros.
+              professora Eliete Barros.
             </p>
             <p>
               A disciplina tem como foco a discussão de temas relacionados a

@@ -35,7 +35,7 @@ export function Navbar() {
               Casos
             </a>
             <a
-              href="#contato"
+              href="#apoio"
               className="flex items-center text-sm font-medium text-muted-foreground hover:text-foreground"
             >
               Ajuda
