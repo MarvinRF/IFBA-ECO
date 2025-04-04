@@ -5,12 +5,14 @@ import { ProjectsSection } from "@/components/projects-section";
 
 import { Footer } from "@/components/footer";
 import { SupportMapSection } from "@/components/contact-section";
+import { ConceptSection } from "@/components/concept-section";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
       <HeroCarousel />
+      <ConceptSection />
       <AboutSection />
       <ProjectsSection />
       <SupportMapSection />
