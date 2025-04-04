@@ -13,28 +13,59 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Reflorestamento Urbano",
+    title: "Ilha de Maré - Contaminação por Petróleo",
     description:
-      "Projeto de plantio de árvores em áreas urbanas para melhorar a qualidade do ar e criar espaços verdes.",
+      "Comunidade quilombola exposta a metais pesados e vazamentos da Petrobras.",
     image:
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80",
-    category: "Biodiversidade",
+      "https://i0.wp.com/almapreta.com.br/images/2022/03/marisco-leonardo-rattes-site.jpg?w=800&ssl=1",
+    category: "Racismo Ambiental",
+    source:
+      "https://brasil.mongabay.com/2023/01/ilha-de-mare-sete-decadas-de-racismo-ambiental-em-salvador/",
   },
   {
-    title: "Reciclagem Consciente",
-    description:
-      "Iniciativa para promover a reciclagem correta e reduzir o impacto ambiental do descarte inadequado.",
+    title: "Mineração em Caetité - BAMIN",
+    description: "Poeira de minério afeta saúde de comunidades tradicionais.",
     image:
-      "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80",
-    category: "Resíduos",
+      "https://assets.brasildefato.com.br/2024/09/image_processing20220927-5447-13emr5r.jpeg",
+    category: "Racismo Ambiental",
+    source: "http://verbetes.cetem.gov.br/verbetes/ExibeVerbete.aspx?verid=174",
   },
   {
-    title: "Energia Solar nas Escolas",
-    description:
-      "Implementação de painéis solares em escolas públicas para educação ambiental e economia de energia.",
+    title: "Ferrovia FIOL - Bom Jesus da Lapa",
+    description: "Obra impacta territórios quilombolas sem consulta prévia.",
     image:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80",
-    category: "Energia",
+      "https://www.sudoestebahia.com/bc-imagens/noticias/0623-sudoeste-bahia-4387-sudoeste-bahia-pasted-image-0-1.webp",
+    category: "Racismo Ambiental",
+    source:
+      "https://brasil.mongabay.com/2021/08/ferrovia-e-mineracao-no-sudoeste-da-bahia-comunidades-denunciam-uma-decada-de-descaso/",
+  },
+  {
+    title: "Agronegócio no Oeste Baiano",
+    description:
+      "Agronegócio desmatou ’51 mil campos de futebol’ de vegetação nativa no cerrado baiano",
+    image:
+      "https://racismoambiental.net.br/wp-content/uploads/2022/08/cerrado-agronegocio-desmatamento-750x410.jpg",
+    category: "Racismo Ambiental",
+    source:
+      "https://racismoambiental.net.br/2022/08/03/agronegocio-desmatou-51-mil-campos-de-futebol-de-vegetacao-nativa-no-cerrado-baiano/",
+  },
+  {
+    title: "Sento Sé - Mineração Tombador Iron",
+    description: "Impactos da mineração na qualidade de vida local.",
+    image:
+      "https://cptba.org.br/wp-content/uploads/2023/08/WhatsApp-Image-2023-08-31-at-09.38.19-1024x575.jpeg.webp",
+    category: "Racismo Ambiental",
+    source:
+      "https://cptba.org.br/mineradora-causa-danos-as-comunidades-tradicionais-de-sento-se/",
+  },
+  {
+    title: "Salvador - Desigualdade Urbana",
+    description: "Periferias sofrem com enchentes e falta de saneamento.",
+    image:
+      "https://www.meiahora.com.br/_midias/jpg/2024/01/19/700x470/1_foto__bea_domingos__1_-31762322.jpg",
+    category: "Racismo Ambiental",
+    source:
+      "https://educacaosemdistancia.unyleya.edu.br/esd/article/view/120/42",
   },
 ];
 
@@ -66,7 +97,7 @@ export function ProjectsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          Mais Casos
+          Casos de Racismo Ambiental na Bahia
         </motion.h2>
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -97,13 +128,19 @@ export function ProjectsSection() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription>{project.description}</CardDescription>
-                  <MotionButton
-                    className="w-full mt-4 bg-primary hover:bg-primary/90"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
+                  <a
+                    href={project.source}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Saiba Mais
-                  </MotionButton>
+                    <MotionButton
+                      className="w-full mt-4 bg-primary hover:bg-primary/90"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      Saiba Mais
+                    </MotionButton>
+                  </a>
                 </CardContent>
               </Card>
             </motion.div>
