@@ -38,7 +38,7 @@ export function Navbar() {
               href="#contato"
               className="flex items-center text-sm font-medium text-muted-foreground hover:text-foreground"
             >
-              Contato
+              Ajuda
             </a>
           </nav>
         </div>

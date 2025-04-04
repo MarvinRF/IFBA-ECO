@@ -107,7 +107,7 @@ export function SupportMapSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          Mapa de Apoio ao Combate ao Racismo Ambiental
+          Apoio no Combate ao Racismo Ambiental
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
