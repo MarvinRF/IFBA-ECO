@@ -29,15 +29,17 @@ const CAROUSEL_ITEMS = [
   },
   {
     image:
-      "https://www.bahianoticias.com.br/fotos/municipios_noticias/38680/IMAGEM_NOTICIA_9.jpg?checksum=1711489877",
-    title: "Morro de São Paulo (Cairu)",
-    description: "Transformando resíduos em recursos",
+      "https://www.brasildedireitos.org.br/app/uploads/libreria/itapagipe-racismo-mbiental-2.webp",
+    title: "Salvador",
+    description:
+      "A península de Itapagipe sofre com poluição e estrutura urbana precária. Novo estudo revela caso histórico de exclusão",
   },
   {
     image:
       "https://upload.wikimedia.org/wikipedia/commons/e/ea/Valen%C3%A7a%2C_Bahia.JPG",
     title: "Centro (Valença)",
-    description: "Protegendo a vida em todas suas formas",
+    description:
+      "Poluição do Rio Una afeta a vida de dezenas de famílias de pescadores",
   },
 ];
 

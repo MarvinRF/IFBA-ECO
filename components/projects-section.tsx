@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Ilha de Maré - Contaminação por Petróleo",
+    title: "Ilha de Maré - Contaminação",
     description:
       "Comunidade quilombola exposta a metais pesados e vazamentos da Petrobras.",
     image:
@@ -31,7 +31,7 @@ const projects = [
     source: "http://verbetes.cetem.gov.br/verbetes/ExibeVerbete.aspx?verid=174",
   },
   {
-    title: "Ferrovia FIOL - Bom Jesus da Lapa",
+    title: "FIOL - Bom Jesus da Lapa",
     description: "Obra impacta territórios quilombolas sem consulta prévia.",
     image:
       "https://www.sudoestebahia.com/bc-imagens/noticias/0623-sudoeste-bahia-4387-sudoeste-bahia-pasted-image-0-1.webp",
@@ -50,7 +50,7 @@ const projects = [
       "https://racismoambiental.net.br/2022/08/03/agronegocio-desmatou-51-mil-campos-de-futebol-de-vegetacao-nativa-no-cerrado-baiano/",
   },
   {
-    title: "Sento Sé - Mineração Tombador Iron",
+    title: "Sento Sé - Tombador Iron",
     description: "Impactos da mineração na qualidade de vida local.",
     image:
       "https://cptba.org.br/wp-content/uploads/2023/08/WhatsApp-Image-2023-08-31-at-09.38.19-1024x575.jpeg.webp",
