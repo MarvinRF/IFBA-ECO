@@ -8,32 +8,97 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Scale, Users, AlertTriangle } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
+import Link from "next/link";
 
-export function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const { toast } = useToast();
+const supportResources = [
+  {
+    category: "Órgãos Governamentais",
+    items: [
+      {
+        title: "Ministério Público da Bahia",
+        icon: <Scale className="h-6 w-6 text-primary" />,
+        contacts: [
+          { type: "phone", value: "(71) 3103-0444", label: "Ouvidoria" },
+          {
+            type: "web",
+            value: "https://www.mpba.mp.br",
+            label: "Site Oficial",
+          },
+        ],
+        description:
+          "Denuncie casos de injustiça ambiental e violações de direitos",
+      },
+      {
+        title: "Defensoria Pública da Bahia",
+        icon: <Scale className="h-6 w-6 text-primary" />,
+        contacts: [
+          {
+            type: "phone",
+            value: "(71) 3117-7000",
+            label: "Central de Atendimento",
+          },
+          { type: "phone", value: "(71) 3117-7080", label: "Direitos Humanos" },
+        ],
+        description:
+          "Assistência jurídica gratuita para comunidades vulneráveis",
+      },
+    ],
+  },
+  {
+    category: "Organizações e Coletivos",
+    items: [
+      {
+        title: "Comissão Pastoral da Terra (CPT)",
+        icon: <Users className="h-6 w-6 text-primary" />,
+        contacts: [
+          { type: "phone", value: "(71) 3241-0751" },
+          { type: "web", value: "https://www.cptnacional.org.br" },
+        ],
+        description: "Acompanhamento de conflitos por terra e água",
+      },
+      {
+        title: "Instituto Socioambiental",
+        icon: <Users className="h-6 w-6 text-primary" />,
+        contacts: [
+          { type: "web", value: "https://www.socioambiental.org" },
+          { type: "email", value: "contato@socioambiental.org" },
+        ],
+        description: "Defesa de territórios tradicionais",
+      },
+    ],
+  },
+  {
+    category: "Canais de Emergência",
+    items: [
+      {
+        title: "Disque Direitos Humanos",
+        icon: <AlertTriangle className="h-6 w-6 text-primary" />,
+        contacts: [
+          { type: "phone", value: "100" },
+          { type: "web", value: "https://www.gov.br/mdh/pt-br/disque100" },
+        ],
+        description: "Denúncias anônimas 24h",
+      },
+      {
+        title: "Emergência Ambiental (INEMA)",
+        icon: <AlertTriangle className="h-6 w-6 text-primary" />,
+        contacts: [
+          { type: "phone", value: "(71) 3116-3041" },
+          { type: "web", value: "https://www.inema.ba.gov.br" },
+        ],
+        description: "Denúncias de crimes ambientais",
+      },
+    ],
+  },
+];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Mensagem enviada!",
-      description: "Agradecemos seu contato. Retornaremos em breve.",
-    });
-    setFormData({ name: "", email: "", message: "" });
-  };
+const MotionCard = motion(Card);
 
+export function SupportMapSection() {
   return (
-    <section id="contato" className="py-16 px-4 md:px-6">
+    <section id="apoio" className="py-16 px-4 md:px-6 bg-secondary">
       <div className="container mx-auto">
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-center mb-12"
@@ -42,118 +107,108 @@ export function ContactSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          Entre em Contato
+          Mapa de Apoio ao Combate ao Racismo Ambiental
         </motion.h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <Card>
-              <CardHeader>
-                <CardTitle>Envie sua mensagem</CardTitle>
-                <CardDescription>
-                  Preencha o formulário abaixo para entrar em contato conosco.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="space-y-2">
-                    <Input
-                      placeholder="Nome completo"
-                      value={formData.name}
-                      onChange={(e) =>
-                        setFormData({ ...formData, name: e.target.value })
-                      }
-                      required
-                      aria-label="Nome completo"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Input
-                      type="email"
-                      placeholder="Email"
-                      value={formData.email}
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
-                      required
-                      aria-label="Email"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Textarea
-                      placeholder="Sua mensagem"
-                      className="min-h-[120px]"
-                      value={formData.message}
-                      onChange={(e) =>
-                        setFormData({ ...formData, message: e.target.value })
-                      }
-                      required
-                      aria-label="Sua mensagem"
-                    />
-                  </div>
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <Button
-                      type="submit"
-                      className="w-full bg-primary hover:bg-primary/90"
-                    >
-                      Enviar Mensagem
-                    </Button>
-                  </motion.div>
-                </form>
-              </CardContent>
-            </Card>
-          </motion.div>
 
-          <motion.div
-            className="space-y-6"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <Card>
-              <CardHeader>
-                <CardTitle>Informações de Contato</CardTitle>
-                <CardDescription>
-                  Outras formas de entrar em contato conosco.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <motion.div
-                  className="flex items-center space-x-3"
-                  whileHover={{ x: 10 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <Mail className="h-5 w-5 text-primary" />
-                  <span>contato@IFBA - Concientização.com.br</span>
-                </motion.div>
-                <motion.div
-                  className="flex items-center space-x-3"
-                  whileHover={{ x: 10 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <Phone className="h-5 w-5 text-primary" />
-                  <span>(11) 9999-9999</span>
-                </motion.div>
-                <motion.div
-                  className="flex items-center space-x-3"
-                  whileHover={{ x: 10 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <MapPin className="h-5 w-5 text-primary" />
-                  <span>Valença, BA - Brasil</span>
-                </motion.div>
-              </CardContent>
-            </Card>
-          </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {supportResources.map((resource, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <MotionCard
+                whileHover={{ scale: 1.02 }}
+                className="h-full flex flex-col"
+              >
+                <CardHeader>
+                  <CardTitle className="text-xl">{resource.category}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-1 space-y-6">
+                  {resource.items.map((item, itemIndex) => (
+                    <div key={itemIndex} className="space-y-4">
+                      <div className="flex items-center gap-3">
+                        {item.icon}
+                        <h3 className="font-semibold">{item.title}</h3>
+                      </div>
+                      <p className="text-sm text-muted-foreground">
+                        {item.description}
+                      </p>
+                      <div className="space-y-2">
+                        {item.contacts.map((contact, contactIndex) => (
+                          <div
+                            key={contactIndex}
+                            className="flex items-center gap-2"
+                          >
+                            {contact.type === "phone" && (
+                              <Link
+                                href={`tel:${contact.value}`}
+                                className="flex items-center gap-2 hover:underline"
+                              >
+                                <Phone className="h-4 w-4" />
+                                <span>{contact.value}</span>
+                                {"label" in contact && contact.label && (
+                                  <span className="text-sm text-muted-foreground">
+                                    ({contact.label})
+                                  </span>
+                                )}
+                              </Link>
+                            )}
+                            {contact.type === "web" && (
+                              <Link
+                                href={contact.value}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 hover:underline"
+                              >
+                                <MapPin className="h-4 w-4" />
+                                <span>Acessar Site</span>
+                              </Link>
+                            )}
+                            {contact.type === "email" && (
+                              <Link
+                                href={`mailto:${contact.value}`}
+                                className="flex items-center gap-2 hover:underline"
+                              >
+                                <Mail className="h-4 w-4" />
+                                <span>Enviar Email</span>
+                              </Link>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </CardContent>
+              </MotionCard>
+            </motion.div>
+          ))}
         </div>
+
+        <motion.div
+          className="mt-12 text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          <Card className="inline-block w-[100%]">
+            <CardContent className="p-6">
+              <h3 className="text-lg font-semibold mb-4">Ajuda Imediata</h3>
+              <div className="flex flex-col gap-3">
+                <Link href="tel:100" className="text-red-600 hover:underline">
+                  <AlertTriangle className="inline mr-2 h-4 w-4" />
+                  Disque Direitos Humanos - 100
+                </Link>
+                <Link href="tel:190" className="text-blue-600 hover:underline">
+                  <AlertTriangle className="inline mr-2 h-4 w-4" />
+                  Emergência Policial - 190
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
       </div>
     </section>
   );
