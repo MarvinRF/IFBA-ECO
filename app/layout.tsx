@@ -7,13 +7,13 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "IFBA - Concientização - Educação Ambiental",
+  title: "IFBA - Conscientização - Educação Ambiental",
   description:
     "Portal de educação ambiental e conscientização ecológica para um futuro sustentável. Aprenda sobre preservação ambiental, reciclagem e energia renovável.",
   keywords:
     "educação ambiental, sustentabilidade, meio ambiente, reciclagem, energia renovável",
   openGraph: {
-    title: "IFBA - Concientização - Educação Ambiental",
+    title: "IFBA - Conscientização - Educação Ambiental",
     description:
       "Portal de educação ambiental e conscientização ecológica para um futuro sustentável.",
     images: [
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
         url: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80",
         width: 1200,
         height: 630,
-        alt: "IFBA - Concientização",
+        alt: "IFBA - Conscientização",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "IFBA - Concientização - Educação Ambiental",
+    title: "IFBA - Conscientização - Educação Ambiental",
     description:
       "Portal de educação ambiental e conscientização ecológica para um futuro sustentável.",
     images: [

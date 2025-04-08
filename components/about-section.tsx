@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const features = [
   {
     icon: <TriangleAlert className="h-8 w-8 text-green-600" />,
-    title: "Consientização",
+    title: "Conscientização",
     description:
       "Conscientizar a sociedade sobre o impacto do racismo ambiental e suas consequências para comunidades vulneráveis.",
   },

@@ -8,7 +8,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Leaf className="h-6 w-6 text-primary" />
-              <span className="font-bold text-lg">IFBA - Concientização</span>
+              <span className="font-bold text-lg">IFBA - Conscientização</span>
             </div>
             <p className="text-muted-foreground">
               Promovendo a educação ambiental e a conscientização ecológica para
@@ -34,7 +34,7 @@ export function Footer() {
 
         <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
           <p>
-            &copy; 2025 IFBA - Concientização. Todos os direitos reservados.
+            &copy; 2025 IFBA - Conscientização. Todos os direitos reservados.
           </p>
         </div>
       </div>
