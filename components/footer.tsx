@@ -11,8 +11,8 @@ export function Footer() {
               <span className="font-bold text-lg">IFBA - Conscientização</span>
             </div>
             <p className="text-muted-foreground">
-              Promovendo a educação ambiental e a conscientização ecológica para
-              um futuro sustentável.
+              Promovendo uma educação ambiental e a conscientização ecológica
+              para um futuro sustentável.
             </p>
           </div>
 

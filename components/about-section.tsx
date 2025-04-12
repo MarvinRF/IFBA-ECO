@@ -9,7 +9,7 @@ const features = [
     icon: <TriangleAlert className="h-8 w-8 text-green-600" />,
     title: "Conscientização",
     description:
-      "Conscientizar a sociedade sobre o impacto do racismo ambiental e suas consequências para comunidades vulneráveis.",
+      "Conscientizar a sociedade sobre os impactos do racismo ambiental e suas consequências para comunidades vulneráveis.",
   },
   {
     icon: <Rss className="h-8 w-8 text-green-600" />,
